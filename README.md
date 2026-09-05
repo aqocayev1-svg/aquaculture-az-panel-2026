@@ -9,4 +9,8 @@
 - World Bank Open Data  
 
 ## Contact
-For questions: [sizin_email_adresiniz@example.com](mailto:sizin_email_adresiniz@example.com)
+**Corresponding Author:**  
+Ali Gojayev – [aqocayev1@beu.edu.az](mailto:aqocayev1@beu.edu.az)
+
+**Co-Author:**  
+Nazim Ismayilov – [nismayilov@beu.edu.az](mailto:nismayilov@beu.edu.az)
