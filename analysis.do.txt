@@ -1,0 +1,16 @@
+﻿* Main analysis for aquaculture panel study
+clear all
+set more off
+
+import delimited data.csv, clear
+
+gen ln_aquaculture = ln(aquaculture_kt)
+gen ln_feed_price = ln(100)
+gen ln_capture = ln(wild_capture_kt)
+
+summarize aquaculture_kt wild_capture_kt ssr_net
+
+display "CAGR for aquaculture: " (9.4/6.1)^(1/6)-1
+display "CAGR for wild capture: " (52.5/56.2)^(1/6)-1
+
+display "Analysis structure ready."

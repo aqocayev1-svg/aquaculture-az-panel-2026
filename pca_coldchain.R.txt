@@ -1,0 +1,18 @@
+﻿# PCA for Cold Chain Index
+data <- read.csv("data.csv")
+
+coldchain_data <- data.frame(
+  cold_storage = c(12.5, 12.8, 13.0, 13.2, 13.5, 13.8, 14.0),
+  lpi_refrig = c(3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8),
+  electricity = c(78, 79, 80, 81, 82, 83, 84),
+  diesel_price = c(0.85, 0.88, 0.92, 0.95, 0.98, 1.02, 1.05)
+)
+
+pca <- prcomp(scale(coldchain_data))
+summary(pca)
+print(pca$rotation)
+
+data$coldchain_index <- pca$x[,1]
+write.csv(data, "data_with_pca.csv", row.names = FALSE)
+
+print("PCA completed.")
